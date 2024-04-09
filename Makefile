@@ -14,6 +14,8 @@ apply:
 	@gcloud container clusters get-credentials ${name} --region ${region} --project ${project}
 
 destroy:
+	kubectl delete -f gitops.yaml
+	kubectl delete -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 	@cd terraform/ && terraform destroy -var="project=${project}" -var="name=${name}" -var="region=${region}"
 
 argocd:
