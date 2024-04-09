@@ -3,5 +3,5 @@ project: cloudfly-01
 name: argocd-demo
 image:
   repository: punkerside/cloudfly-01
-  tag: v0.0.11
+  tag: v0.0.12
   pullPolicy: IfNotPresent
