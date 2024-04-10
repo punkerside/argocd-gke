@@ -8,6 +8,37 @@
 * [Install gcloud CLI](https://cloud.google.com/sdk/docs/install?hl=es-419)
 * [Install Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 
+## **Uso**
+
+1. Crear cluster y nodes
+
+```bash
+make init
+make apply
+```
+
+2. Instalar ArgoCD
+
+```bash
+make argocd
+```
+
+3. Inscribir aplicaciones en ArgoCD
+
+```bash
+make gitops
+```
+
+4. Liberar nueva version de imagen en DockerHub
+
+```bash
+export dockerhubPass=myPass
+export dockerhubUser=myUser
+make release
+```
+
+## **Pruebas**
+
 1. Pruebas contra la API:
 
 ```bash
